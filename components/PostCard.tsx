@@ -19,10 +19,10 @@ export default function PostCard({ post }: { post: Post; featured?: boolean }) {
               className="object-cover transition-transform duration-300 group-hover:scale-105"
             />
           ) : (
-            <div className="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-orange-600/10" />
+            <div className="absolute inset-0 bg-linear-to-br from-amber-400/20 to-orange-600/10" />
           )}
           {/* Overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#111118] via-[#111118]/20 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#111118] via-[#111118]/20 to-transparent" />
 
           {/* Category badge */}
           <span className="absolute top-3 left-3 px-3 py-1 bg-amber-400 text-black text-xs font-bold rounded-full uppercase tracking-wider shadow-lg">
@@ -56,7 +56,7 @@ export default function PostCard({ post }: { post: Post; featured?: boolean }) {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               {/* Avatar */}
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-xs font-black shrink-0 shadow-md shadow-amber-500/20">
+              <div className="w-8 h-8 rounded-full bg-linear-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black text-xs font-black shrink-0 shadow-md shadow-amber-500/20">
                 {post.author.split(' ').map(n => n[0]).join('').slice(0, 2)}
               </div>
               <div>
